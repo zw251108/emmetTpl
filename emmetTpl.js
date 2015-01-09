@@ -219,7 +219,7 @@
 		keyList = template.match(keyListExpr);
 
 		return function(data, start, end){
-			data = isArray(data) ? data : [].push(data);
+			data = isArray(data) ? data : [data];
 
 			var i = end
 				, j = data.length
