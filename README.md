@@ -1,4 +1,4 @@
-#基于 Emmet 的 HTML 模板引擎
+# 基于 Emmet 的 HTML 模板引擎
 
 将
 
@@ -14,15 +14,16 @@
 当然实际结果并没有缩进格式，这里只是作为示例
 
 该模板唯一的目的是为了减少 HTML 的代码量，不过目前仅实现 Emmet 的 #id、.class、[attr=value] 的基础选择器功能
+
 目前来说作为模板引擎已经足够了
 
 该模板引擎可以前后端通用
 
 在前端中并不依赖 jQuery，但全局中若有 jQuery，模板引擎会挂到 jQuery 的命名空间下
 
-##前端的使用
+## 前端的使用
 
-###AMD 规范下
+### AMD 规范下
 	require(['yourPath/emmetTpl.js'], function(tpl){
 		var tplFunc = tpl({
 			template: 'div#user.module.module-user[data-id=%id%]>h2.module_title{%username%}+span.module_status{%status%}'
@@ -53,7 +54,7 @@
         var html = tplFunc( data ).join('');
     });
 
-###未使用 AMD 规范
+### 未使用 AMD 规范
 
 	<script src="yourPath/jquery.js"></script>
 	<script src="yourPath/emmetTpl.js"></script>
@@ -73,7 +74,7 @@
 	});
 	</script>
 
-##服务器端 Node.js 下使用
+## 服务器端 Node.js 下使用
 
 如 express 下:
 
